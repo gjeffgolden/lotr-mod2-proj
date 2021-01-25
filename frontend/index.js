@@ -6,7 +6,7 @@ fetch('http://localhost:3000/characters')
         characters.forEach(character => {
             const li = document.createElement('li')
             li.innerHTML = `
-            <a href="${character.image}" target="_blank">${character.name}</a>
+            <a href="/characters.html?id=${character.id}">${character.name}</a>
             `
             document.querySelector('#character-list').append(li)
         })
