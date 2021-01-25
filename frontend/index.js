@@ -11,5 +11,3 @@ fetch('http://localhost:3000/characters')
             document.querySelector('#character-list').append(li)
         })
     })
-
-
