@@ -11,7 +11,6 @@ if (charRace) {
     charactersURL = `${charactersURL}?race=${charRace}`
 }
 
-
 fetch('http://localhost:3000/characters')
 .then(response => response.json())
 .then(characters => {
