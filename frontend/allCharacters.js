@@ -17,12 +17,14 @@ fetch('http://localhost:3000/characters')
 .then(characters => {
   characters.forEach(character => {
     if(!raceArray.includes(character.race)){
-      raceArray.push(character.race)
-      const option = document.createElement('option')
-      option.textContent = character.race
-      option.value = character.race
-      
-      document.querySelector('#race-dropdown').append(option)
+      if(character.race != "NaN"){
+        raceArray.push(character.race)
+        const option = document.createElement('option')
+        option.textContent = character.race
+        option.value = character.race
+        
+        document.querySelector('#race-dropdown').append(option)
+      }
     }
   })
 })
