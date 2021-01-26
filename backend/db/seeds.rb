@@ -6,6 +6,9 @@ require 'rest-client'
     Authorization: 'Bearer vO2ZfCY1l0CJi4rQFUba'
 }))
 
+Oath.destroy_all
+Fellowship.destroy_all
+Quest.destroy_all
 Character.destroy_all
 
 @response['docs'].each do |character|
@@ -19,8 +22,14 @@ Character.destroy_all
         realm: character["realm"],
         hair: character["hair"],
         name: character["name"],
-        image: character["wikiUrl"]
+        link: character["wikiUrl"]
     )
 end
+
+quest1 = Quest.create name: "Destroy the One Ring", description: "Take the ring to Mordor and throw it into Mount Doom."
+quest2 = Quest.create name: "Fight Smaug on the Lonely Mountain", description: "Cleanse the Lonely Mountain of the dragon menace and recover lost Dwarven treasure."
+quest3 = Quest.create name: "Remove the Evil from Mirkwood", description: "Investigate the growing darkness in Mirkwood and expel it."
+quest4 = Quest.create name: "Protect the Hobbits in the Shire", description: "Defeat the orc army invading the Shire."
+quest5 = Quest.create name: "Conquer Middle-Earth", description: "Retrieve the One Ring and return it to Sauron for glory and riches."
 
 # binding.pry

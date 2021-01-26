@@ -10,6 +10,7 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.string :realm
       t.string :hair
       t.string :name
+      t.string :link
       t.string :image
 
       t.timestamps

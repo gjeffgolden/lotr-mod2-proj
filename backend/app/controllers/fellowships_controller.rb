@@ -1,0 +1,2 @@
+class FellowshipsController < ApplicationController
+end

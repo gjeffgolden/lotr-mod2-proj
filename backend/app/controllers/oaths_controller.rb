@@ -1,0 +1,2 @@
+class OathsController < ApplicationController
+end
