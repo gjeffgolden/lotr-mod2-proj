@@ -12,15 +12,13 @@ if (charRace) {
 }
 
 
-fetch(charactersURL)
+fetch('http://localhost:3000/characters')
 .then(response => response.json())
 .then(characters => {
   characters.forEach(character => {
     if(!raceArray.includes(character.race)){
       raceArray.push(character.race)
       const option = document.createElement('option')
-      
-      // const li = document.createElement
       option.textContent = character.race
       option.value = character.race
       
@@ -29,7 +27,7 @@ fetch(charactersURL)
   })
 })
 
-fetch('http://localhost:3000/characters')
+fetch(charactersURL)
     .then(response => response.json())
     .then(characters => {
         characters.forEach(character => {
