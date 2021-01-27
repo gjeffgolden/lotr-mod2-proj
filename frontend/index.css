@@ -128,4 +128,27 @@ div {
     color: #f5142e;
 }
 
+#character-details ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#character-details ul li a {
+    justify-content: left;
+    color: blue;
+    padding: 0;
+    margin: 1px;
+}
+
+#oath-form {
+    justify-content: left;
+}
+
+#fellowship-section h2 {
+    color: black;
+    text-align: left;
+}
 
