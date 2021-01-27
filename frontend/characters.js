@@ -27,7 +27,7 @@ fetch(`http://localhost:3000/characters/${id}`)
         <li>Spouse: ${character["spouse"]}</li>
         <li>Realm: ${character["realm"]}</li>
         <li>Hair Color: ${character["hair"]}</li>
-        <li><a href="${character["image"]}" target="_blank">LOTR Wiki Link</a></li>
+        <li><a href="${character["link"]}" target="_blank">LOTR Wiki Link</a></li>
         `
         document.querySelector('#character-details').append(charDetails)
     })
