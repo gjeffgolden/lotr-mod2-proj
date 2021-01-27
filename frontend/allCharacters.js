@@ -19,9 +19,12 @@ fetch('http://localhost:3000/characters')
       if(character.race != "NaN"){
         raceArray.push(character.race)
         const option = document.createElement('option')
-        option.textContent = character.race
+        if(character.race === ""){
+          option.textContent = "Show All"
+        }else{
+          option.textContent = character.race
+        }
         option.value = character.race
-        
         document.querySelector('#race-dropdown').append(option)
       }
     }
