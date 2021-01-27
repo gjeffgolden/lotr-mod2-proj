@@ -20,7 +20,10 @@ function showQuest(quest) {
     const questDescription = document.createElement('p')
     questDescription.textContent = quest.description
 
-    questCard.append(questName, questDescription)
+    const ringGIF = document.createElement('img')
+    ringGIF.src = "https://static.wikia.nocookie.net/lotr/images/a/a2/The_one_ring_animated.gif/revision/latest/top-crop/width/220/height/220?cb=20091103161137"
+
+    questCard.append(questName, questDescription, ringGIF)
     questCardSection.append(questCard)
 } 
 
