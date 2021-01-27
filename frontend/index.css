@@ -75,6 +75,7 @@ li a:hover {
     justify-content: center;
     flex-direction: row;
 }
+
 #filtered-characters {
     display: flex;
     flex-wrap: wrap;
@@ -101,6 +102,30 @@ div {
     padding: 1rem;
     box-shadow: 2px 2px 5px rgb(196, 180, 121);
     background-color: #fbeca3;
+}
+
+#add-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgb(196, 180, 121);
+    background-color: #fbeca3;
+}
+
+#fellowship-form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#fellowship-form label {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px;
+    color: #f5142e;
 }
 
 
