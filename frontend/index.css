@@ -18,7 +18,7 @@ p {
     font-weight: bold;
 }
 
-ul {
+#nav-bar{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -55,7 +55,13 @@ li a:hover {
     padding-top: 20px;
 }
 
-section {
+#quest-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+#filtered-characters {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

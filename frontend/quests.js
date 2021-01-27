@@ -2,6 +2,7 @@ const queryParams = new URLSearchParams(window.location.search)
 const id = queryParams.get('id')
 const questDropdown = document.querySelector('#quest-dropdown')
 const form = document.querySelector('#fellowship-form')
+const fellowshipSection = document.querySelector('#fellowship-section')
 
 form.action = `http://localhost:3000/fellowships?quest_id=${id}`
 console.log(form.action)
@@ -18,6 +19,22 @@ fetch(`http://localhost:3000/quests/${id}`)
       document.querySelector('#quest-section').append(h1)
       document.querySelector('#quest-section').append(h3)
     })
+
+    fetch(`http://localhost:3000/fellowships`)
+    .then(response => response.json())
+    .then(oaths => oaths.forEach(showFellowship))
+
+    function showFellowship(fellowship){
+        if(fellowship.quest.id == id){
+        const fellowshipCard = document.createElement("div")
+
+        const name = document.createElement("h2")
+
+        name.innerHTML = `<a href="http://localhost:3001/fellowship.html?id=${fellowship.id}">${fellowship.name}</a>` 
+        fellowshipCard.append(name)
+        fellowshipSection.append(fellowshipCard)
+        }
+    }
 
 
 

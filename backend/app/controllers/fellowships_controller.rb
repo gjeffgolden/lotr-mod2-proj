@@ -1,12 +1,12 @@
 class FellowshipsController < ApplicationController
   def index
     @fellowships = Fellowship.all 
-    render json: @fellowships, include: :characters
+    render json: @fellowships, include: [:characters, :quest]
   end
 
   def show
     @fellowship = Fellowship.find params[:id]
-    render json: @fellowship, include: :characters
+    render json: @fellowship, include: [:characters, :quest]
   end
 
   def create 
