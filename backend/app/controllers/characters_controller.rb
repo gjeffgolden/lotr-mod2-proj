@@ -6,13 +6,13 @@ class CharactersController < ApplicationController
             render json: @characters
         else
             @characters = Character.all 
-            render json: @characters
+            render json: @characters, include: [:oaths, :fellowships]
         end
     end
 
     def show
         @character = Character.find params[:id]
-        render json: @character
+        render json: @character, include: [:oaths, :fellowships]
     end
 
 end

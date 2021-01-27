@@ -2,8 +2,8 @@ const queryParams = new URLSearchParams(window.location.search)
 const id = queryParams.get('id')
 const form = document.querySelector('#oath-form')
 
+
 form.action = `http://localhost:3000/oaths?character_id=${id}`
-console.log(form.action)
 
 fetch(`http://localhost:3000/characters/${id}`)
     .then(response => response.json())
@@ -43,3 +43,16 @@ fetch(`http://localhost:3000/characters/${id}`)
             document.querySelector('#fellowship-dropdown').append(option)
         })
     )
+
+    fetch(`http://localhost:3000/oaths`)
+    .then(response => response.json())
+    .then(oaths => oaths.forEach(oath => {
+        if(oath.character.id == id){
+            const option = document.createElement('option')
+
+            option.textContent = oath.fellowship.name
+            option.value = oath.id
+
+            document.querySelector('#remove-fellowship-dropdown').append(option)
+        }
+    }))
