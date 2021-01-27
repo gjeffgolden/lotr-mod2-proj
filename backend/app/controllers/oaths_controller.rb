@@ -14,7 +14,7 @@ class OathsController < ApplicationController
       character_id: params[:character_id],
       fellowship_id: params[:fellowship_id]
     )
-    render json: @oath
+    redirect_to "http://localhost:3001/allCharacters.html"
   end
   
   def destroy 
