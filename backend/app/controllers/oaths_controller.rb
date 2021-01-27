@@ -1,12 +1,12 @@
 class OathsController < ApplicationController
   def index 
     @oaths = Oath.all 
-    render json: @oaths
+    render json: @oaths, include: [:fellowship, :character]
   end
 
   def show 
     @oath = Oath.find params[:id]
-    render json: @oath
+    render json: @oath, include: [:fellowship, :character]
   end
 
   def create 

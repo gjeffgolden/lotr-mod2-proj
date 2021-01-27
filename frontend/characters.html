@@ -9,12 +9,18 @@
 <body>
     <section id="character-details"></section>
     <h2>Add to a Fellowship:</h2>
-    <form id="oath-form" action="http://localhost:3000/oath" method="POST">
+    <form id="oath-form" action="http://localhost:3000/oaths" method="POST">
         <select id="fellowship-dropdown" name="fellowship_id">
 
         </select>
         <input type="submit">
     </form>
+    <h2>Remove from a Fellowship:</h2>
+    <!-- <form id="remove-oath-form" action="http://localhost:3000/oaths" method="POST">
+        <input type="hidden" name="_method" value="DELETE" />
+        <input type="submit">
+    </form> -->
+    <section id="fellowship-section"></section>
     <h4><a href="/">Return to homepage</a></h4>
 </body>
 </html>
