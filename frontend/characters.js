@@ -1,6 +1,7 @@
 const queryParams = new URLSearchParams(window.location.search)
 const id = queryParams.get('id')
 const form = document.querySelector('#oath-form')
+const oathSection = document.querySelector('#fellowship-section')
 
 
 form.action = `http://localhost:3000/oaths?character_id=${id}`
@@ -44,15 +45,38 @@ fetch(`http://localhost:3000/characters/${id}`)
         })
     )
 
+    // fetch(`http://localhost:3000/oaths`)
+    // .then(response => response.json())
+    // .then(oaths => oaths.forEach(oath => {
+    //     if(oath.character.id == id){
+    //         const option = document.createElement('option')
+
+    //         option.textContent = oath.fellowship.name
+    //         option.value = oath.id
+
+    //         document.querySelector('#remove-fellowship-dropdown').append(option)
+    //     }
+    // }))
+
     fetch(`http://localhost:3000/oaths`)
     .then(response => response.json())
-    .then(oaths => oaths.forEach(oath => {
+    .then(oaths => oaths.forEach(showOath))
+
+    function showOath(oath){
         if(oath.character.id == id){
-            const option = document.createElement('option')
+        const oathCard = document.createElement("div")
 
-            option.textContent = oath.fellowship.name
-            option.value = oath.id
+        const name = document.createElement("h2")
 
-            document.querySelector('#remove-fellowship-dropdown').append(option)
+        const deleteButton = document.createElement("div")
+        deleteButton.innerHTML = `
+        <form id="remove-oath-form" action="http://localhost:3000/oaths/${oath.id}" method="POST">
+        <input type="hidden" name="_method" value="DELETE" />
+        <input type="submit">
+    </form>`
+
+        name.textContent = oath.fellowship.name 
+        oathCard.append(name, deleteButton)
+        oathSection.append(oathCard)
         }
-    }))
+    }
