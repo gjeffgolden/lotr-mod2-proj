@@ -16,7 +16,7 @@ fetch(`http://localhost:3000/quests/${id}`)
       h1.textContent = `Quest: ${quest.name}`
       h3.textContent = `Description: ${quest.description}`
 
-      document.querySelector('#quest-section').append(h1)
+      document.querySelector('body').prepend(h1)
       document.querySelector('#quest-section').append(h3)
     })
 

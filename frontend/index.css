@@ -9,7 +9,12 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    color: #fbeca3;
+}
+
 h3 {
+    color: #000000;
     font-size: 34px;
 }
 
@@ -19,6 +24,9 @@ p {
 }
 
 #nav-bar{
+    display: flex;
+    width: auto;
+    justify-content: space-around;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -29,6 +37,12 @@ p {
 li {
     display: inline;
     float: center;
+}
+
+form {
+    display:flex;
+    justify-content: center;
+    padding: 30px;
 }
 
 li a {
@@ -68,6 +82,11 @@ li a:hover {
     flex-direction: row;
 }
 
+#filtered-characters li {
+    border-style: solid;
+    border-width: 1px;
+}
+
 section img {
     width: 10%;
 }
@@ -83,4 +102,5 @@ div {
     box-shadow: 2px 2px 5px rgb(196, 180, 121);
     background-color: #fbeca3;
 }
+
 
