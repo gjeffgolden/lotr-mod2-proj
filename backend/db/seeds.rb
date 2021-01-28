@@ -126,35 +126,35 @@ quest1 = Quest.create(
     name: "Destroy the One Ring", 
     description: "Take the ring to Mordor and throw it into Mount Doom.",
     image: "https://images4.alphacoders.com/239/23968.jpg",
-    audio: ""
+    audio: "/audio/MinasTirith.mp3"
 )
 
 quest2 = Quest.create(
     name: "Fight Smaug on the Lonely Mountain", 
     description: "Cleanse the Lonely Mountain of the dragon menace and recover lost Dwarven treasure.",
     image: "https://images2.alphacoders.com/530/530539.jpg",
-    audio: ""
+    audio: "/audio/Helm'sDeep.mp3"
 )
 
 quest3 = Quest.create(
     name: "Remove the Evil from Mirkwood", 
     description: "Investigate the growing darkness in Mirkwood and expel it.",
     image: "https://images8.alphacoders.com/101/thumb-1920-1019233.jpg",
-    audio: ""
+    audio: "/audio/HopeFails.mp3"
 )
 
 quest4 = Quest.create(
     name: "Protect the Hobbits in the Shire", 
     description: "Defeat the orc army invading the Shire.",
     image: "https://images4.alphacoders.com/644/644695.png",
-    audio: ""
+    audio: "/audio/AKnifeintheDark.mp3"
 )
 
 quest5 = Quest.create(
     name: "Conquer Middle-Earth", 
     description: "Retrieve the One Ring and return it to Sauron for glory and riches.",
     image: "https://images2.alphacoders.com/236/236060.jpg",
-    audio: ""
+    audio: "/audio/TheBlackGateOpens.mp3"
 )
 
 # binding.pry
