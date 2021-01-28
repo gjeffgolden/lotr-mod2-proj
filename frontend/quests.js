@@ -27,6 +27,7 @@ fetch(`http://localhost:3000/quests/${id}`)
     function showFellowship(fellowship){
         if(fellowship.quest.id == id){
         const fellowshipCard = document.createElement("div")
+        fellowshipCard.className = "quest-card-class"
 
         const name = document.createElement("h2")
 
