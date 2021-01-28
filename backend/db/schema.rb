@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_171332) do
+ActiveRecord::Schema.define(version: 2021_01_28_184842) do
 
   create_table "characters", force: :cascade do |t|
     t.string "height"
@@ -50,9 +50,11 @@ ActiveRecord::Schema.define(version: 2021_01_26_171332) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
+    t.string "audio"
   end
 
-  add_foreign_key "quests"
+  add_foreign_key "fellowships", "quests"
   add_foreign_key "oaths", "characters"
   add_foreign_key "oaths", "fellowships"
 end
