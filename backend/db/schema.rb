@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_184842) do
+ActiveRecord::Schema.define(version: 2021_01_28_233601) do
 
   create_table "characters", force: :cascade do |t|
     t.string "height"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_184842) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
     t.string "audio"
+    t.string "video"
   end
 
   add_foreign_key "fellowships", "quests"
