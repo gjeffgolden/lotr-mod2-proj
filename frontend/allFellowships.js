@@ -3,7 +3,7 @@ fetch("http://localhost:3000/fellowships")
     .then(fellowships => {
         fellowships.forEach(fellowship => {
             const div = document.createElement('div')
-
+            div.className = "quest-card-class"
             div.innerHTML = `
             <h3><a href="http://localhost:3001/fellowship.html?id=${fellowship.id}">${fellowship.name}</a></h3>
             `

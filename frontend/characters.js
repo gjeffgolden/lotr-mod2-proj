@@ -65,7 +65,7 @@ fetch(`http://localhost:3000/characters/${id}`)
     function showOath(oath){
         if(oath.character.id == id){
         const oathCard = document.createElement("div")
-
+        oathCard.className = "quest-card-class"
         const name = document.createElement("h2")
 
         const deleteButton = document.createElement("section")

@@ -13,6 +13,7 @@ function displayQuests (quests) {
 
 function showQuest(quest) {
     const questCard = document.createElement('div')
+    questCard.className = "quest-card-class"
 
     const questName = document.createElement('h3')
     questName.innerHTML = `<a href="/quests.html?id=${quest.id}">${quest.name}</a>`
