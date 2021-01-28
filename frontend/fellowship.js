@@ -26,6 +26,7 @@ fetch(`http://localhost:3000/fellowships/${id}`)
             <div class="flip-card-inner">
                 <div class="flip-card-front"
                     <h2>${oath.character.name}</h2>
+                    <img src="${oath.character.image}" alt="character-imgage" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
                     <p>Race: ${oath.character.race}</p>
