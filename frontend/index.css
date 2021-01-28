@@ -207,3 +207,7 @@ section img {
     color: Black;
     transform: rotateY(180deg);
 }
+
+.fellowship-char-info{
+    display: inline-block;
+}

@@ -16,7 +16,10 @@ fetch(`http://localhost:3000/fellowships/${id}`)
     .then(oaths => { oaths.forEach(oath => {
         
         if(oath.fellowship.id == id){
+            const div = document.createElement('div')
             const oathCard = document.createElement("div")
+
+            div.className = "fellowship-char-info"
 
             oathCard.className = "oath-class"
             oathCard.innerHTML = `
@@ -35,7 +38,8 @@ fetch(`http://localhost:3000/fellowships/${id}`)
                     </form>
                 </div>
             </div>`
-            oathSection.append(oathCard)
+            div.append(oathCard)
+            oathSection.append(div)
         }
     })
     })
