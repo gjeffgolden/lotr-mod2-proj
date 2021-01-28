@@ -19,7 +19,7 @@ fetch(`http://localhost:3000/characters/${id}`)
     .then(character => {
         const charDetails = document.createElement('ul')
         charDetails.innerHTML = `
-        <img src="${character["image"]}" style="width:400px;height:400px;">
+        <img src="${character["image"]}" style="width:50%;height:50%;">
         <br>
         <li>Height: ${character["height"]}</li>
         <li>Race: ${character["race"]}</li>
