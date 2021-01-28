@@ -6,7 +6,6 @@ let charactersURL = `${backendBaseURL}/characters`
 const filterParams = new URLSearchParams(window.location.search)
 const charRace = filterParams.get('race')
 
-console.log(charRace)
 if (charRace) {
     charactersURL = `${charactersURL}?race=${charRace}`
 }
@@ -14,19 +13,21 @@ if (charRace) {
 fetch('http://localhost:3000/characters')
 .then(response => response.json())
 .then(characters => {
-  characters.forEach(character => {
+  const smallerList = characters.filter((character) => 
+    character.race === "Human" ||
+    character.race === "Dwarf" ||
+    character.race === "Elf" ||
+    character.race === "Hobbit" ||
+    character.race === "Maiar" ||
+    character.race === "Dragons" ||
+    character.race === "Orcs")
+  smallerList.forEach(character => {
     if(!raceArray.includes(character.race)){
-      if(character.race != "NaN"){
-        raceArray.push(character.race)
-        const option = document.createElement('option')
-        if(character.race === ""){
-          option.textContent = "Show All"
-        }else{
-          option.textContent = character.race
-        }
-        option.value = character.race
-        document.querySelector('#race-dropdown').append(option)
-      }
+      raceArray.push(character.race)
+      const option = document.createElement('option')
+      option.textContent = character.race
+      option.value = character.race
+      document.querySelector('#race-dropdown').append(option)
     }
   })
 })
