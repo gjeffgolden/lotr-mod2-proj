@@ -1,5 +1,13 @@
 const queryParams = new URLSearchParams(window.location.search)
 const id = queryParams.get('id')
+const charSection = document.querySelector("#character-section")
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+const randomNumber = getRandomInt(7)
+console.log(randomNumber)
 
 fetch(`http://localhost:3000/quests/${id}`)
 .then(response => response.json())
@@ -25,20 +33,32 @@ fetch(`http://localhost:3000/quests/${id}`)
       document.querySelector('#quest-section').append(h3)
       document.querySelector('#nav-bar').append(audio)
       document.querySelector('#image-section').append(image)
-      console.log(quest.characters)
       quest.characters.forEach( character => {
-        const charH3 = document.createElement('h3')
+        const div = document.createElement('div')
+        const charCard = document.createElement('div')
 
-        charH3.textContent = character.name 
+        div.className = 'fellowship-char-info'
+        charCard.className = 'oath-class'
 
-        document.querySelector('body').append(charH3)
+
+        charCard.innerHTML = `
+        <div class="flip-card-inner">
+            <div class="flip-card-front"
+                <h2>${character.name}</h2>
+                <img src="${character.image}" alt="character-imgage" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <p>Race: ${character.race}</p>
+              <p>Gender: ${character.gender}</p>
+              <p>Height: ${character.height}</p>
+              <p>Realm: ${character.realm}</p>
+                      
+            </div>
+        </div>`
+
+        div.append(charCard)
+        charSection.append(div)
       })
 })
-
-fetch(`http://localhost:3000/oaths`)
-.then(response => response.json())
-.then(oaths => oaths.forEach(oath => {
-  console.log(oath.fellowship.quest)
-}))
 
 
