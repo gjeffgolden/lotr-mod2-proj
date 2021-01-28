@@ -10,6 +10,7 @@ fetch(`http://localhost:3000/fellowships/${id}`)
             document.querySelector('body').prepend(h1)
         })
 
+
     fetch(`http://localhost:3000/oaths`)
     .then(response => response.json())
     .then(oaths => { oaths.forEach(oath => {
@@ -20,9 +21,9 @@ fetch(`http://localhost:3000/fellowships/${id}`)
 
             const deleteButton = document.createElement("div")
             deleteButton.innerHTML = `
-            <form id="remove-oath-form" action="http://localhost:3000/oaths/${oath.id}" method="POST">
+            <form id="remove-oath-form" action="http://localhost:3000/oaths/${oath.id}" method="POST" onsubmit="setTimeout(function(){window.location.reload();},10);">
             <input type="hidden" name="_method" value="DELETE" />
-            <input type="submit">
+            <input type="submit" value="Remove from Fellowship">
             </form>`
 
             name.textContent = oath.character.name 
