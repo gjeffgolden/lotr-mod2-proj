@@ -65,10 +65,10 @@ fetch(`http://localhost:3000/characters/${id}`)
     function showOath(oath){
         if(oath.character.id == id){
         const oathCard = document.createElement("div")
-
+        oathCard.className = "quest-card-class"
         const name = document.createElement("h2")
 
-        const deleteButton = document.createElement("div")
+        const deleteButton = document.createElement("section")
         deleteButton.innerHTML = `
         <form id="remove-oath-form" action="http://localhost:3000/oaths/${oath.id}" method="POST" onsubmit="setTimeout(function(){window.location.reload();},10);">
         <input type="hidden" name="_method" value="DELETE" />
