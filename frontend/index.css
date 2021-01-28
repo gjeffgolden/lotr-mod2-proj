@@ -200,6 +200,8 @@ section img {
 .flip-card-front {
     background-color: #fbeca3;
     color: black;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .flip-card-back {
