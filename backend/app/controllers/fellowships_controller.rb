@@ -14,6 +14,7 @@ class FellowshipsController < ApplicationController
       name: params[:name],
       quest_id: params[:quest_id]
     )
+    redirect_to "http://localhost:3001/quests.html?id=#{params[:quest_id]}"
   end
 
   def update 
@@ -22,12 +23,13 @@ class FellowshipsController < ApplicationController
       name: params[:name],
       quest_id: params[:quest_id]
     )
-    render json: @fellowship
+    redirect_to "http://localhost:3001/fellowship.html?id=#{params[:quest_id]}"
   end
 
   def destroy 
     @fellowship = Fellowship.find params[:id]
     @fellowship.destroy
+    redirect_to "http://localhost:3001/allFellowships.html"
   end
 
 end
