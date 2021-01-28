@@ -25,7 +25,7 @@ fetch(`http://localhost:3000/fellowships/${id}`)
             oathCard.innerHTML = `
             <div class="flip-card-inner">
                 <div class="flip-card-front"
-                    <h1>${oath.character.name}</h1>
+                    <h2>${oath.character.name}</h2>
                 </div>
                 <div class="flip-card-back">
                     <p>Race: ${oath.character.race}</p>
