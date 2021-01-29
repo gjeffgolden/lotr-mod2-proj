@@ -1,6 +1,6 @@
 # Lord of the Rings: Choose Your Quest!
 ### Flatiron School Mod 2 Pair Project (Full Stack Web App)
-##### Colton O'Connor (@bigdumbbaby) and Jeff Golden (@gjeffgolden)
+##### Colton O'Connor ( @bigdumbbaby ) and Jeff Golden ( @gjeffgolden )
 
 
 
