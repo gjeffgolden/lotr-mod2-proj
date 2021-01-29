@@ -1,6 +1,7 @@
 const queryParams = new URLSearchParams(window.location.search)
 const id = queryParams.get('id')
 const charSection = document.querySelector("#character-section")
+const winLoose = document.querySelector("#win-loose")
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -8,6 +9,7 @@ function getRandomInt(max) {
 
 const randomNumber = getRandomInt(7)
 console.log(randomNumber)
+
 
 fetch(`http://localhost:3000/quests/${id}`)
 .then(response => response.json())
@@ -41,6 +43,8 @@ fetch(`http://localhost:3000/quests/${id}`)
       document.querySelector('#image-section').append(image)
       document.querySelector('#quest-video').append(video)
 
+      let charactersLength = quest.characters.length 
+
       quest.characters.forEach( character => {
         const div = document.createElement('div')
         const charCard = document.createElement('div')
@@ -66,6 +70,19 @@ fetch(`http://localhost:3000/quests/${id}`)
         div.append(charCard)
         charSection.append(div)
       })
+      if(charactersLength < randomNumber){
+        const looseMessage = document.createElement("h2") 
+
+        looseMessage.textContent = "Sorry, the message was not a succes. Maybe try adding more members to your fellowship"
+
+        winLoose.append(looseMessage)
+      }else {
+        const winMessage = document.createElement("h2") 
+
+        winMessage.textContent = "Congradulations! The fellowship was successful in the mission"
+
+        winLoose.append(winMessage)
+      }
 })
 
 
