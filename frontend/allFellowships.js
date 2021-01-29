@@ -7,7 +7,6 @@ fetch("http://localhost:3000/fellowships")
             div.innerHTML = `
             <h3><a href="http://localhost:3001/fellowship.html?id=${fellowship.id}">${fellowship.name}</a></h3>
             `
-            console.log(fellowship.oaths)
 
             if(fellowship.oaths.length === 0){
                 const deleteButton = document.createElement("div")

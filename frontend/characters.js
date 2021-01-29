@@ -19,7 +19,7 @@ fetch(`http://localhost:3000/characters/${id}`)
     .then(character => {
         const charDetails = document.createElement('ul')
         charDetails.innerHTML = `
-        <img src="${character["image"]}" style="width:50%;height:50%;">
+        <img src="${character["image"]}" alt="LOTR Character Fan Art" style="width:50%;height:50%;">
         <br>
         <li>Height: ${character["height"]}</li>
         <li>Race: ${character["race"]}</li>
@@ -47,19 +47,6 @@ fetch(`http://localhost:3000/characters/${id}`)
         })
     )
 
-    // fetch(`http://localhost:3000/oaths`)
-    // .then(response => response.json())
-    // .then(oaths => oaths.forEach(oath => {
-    //     if(oath.character.id == id){
-    //         const option = document.createElement('option')
-
-    //         option.textContent = oath.fellowship.name
-    //         option.value = oath.id
-
-    //         document.querySelector('#remove-fellowship-dropdown').append(option)
-    //     }
-    // }))
-
     fetch(`http://localhost:3000/oaths`)
     .then(response => response.json())
     .then(oaths => oaths.forEach(showOath))
@@ -75,8 +62,8 @@ fetch(`http://localhost:3000/characters/${id}`)
         <form id="remove-oath-form" action="http://localhost:3000/oaths/${oath.id}" method="POST" onsubmit="setTimeout(function(){window.location.reload();},10);">
         <input type="hidden" name="_method" value="DELETE" />
         <input type="submit" value="Remove from Fellowship">
-    </form>`
-
+        </form>
+        `
         name.textContent = oath.fellowship.name 
         oathCard.append(name, deleteButton)
         oathSection.append(oathCard)

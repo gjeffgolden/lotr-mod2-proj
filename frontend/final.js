@@ -8,8 +8,6 @@ function getRandomInt(max) {
 }
 
 const randomNumber = getRandomInt(7)
-console.log(randomNumber)
-
 
 fetch(`http://localhost:3000/quests/${id}`)
 .then(response => response.json())
@@ -32,7 +30,7 @@ fetch(`http://localhost:3000/quests/${id}`)
           Your browser does not support the audio element.
       </audio>
       `
-      image.innerHTML=`<img src="${quest.image}" style="width:80%; height:80%;">
+      image.innerHTML=`<img src="${quest.image}" alt="Lord of the Rings fan art" style="width:80%; height:80%;">
       `
       h1.textContent = `Quest: ${quest.name}`
       h3.textContent = `Description: ${quest.description}`
@@ -56,7 +54,7 @@ fetch(`http://localhost:3000/quests/${id}`)
         <div class="flip-card-inner">
             <div class="flip-card-front"
                 <h2>${character.name}</h2>
-                <img src="${character.image}" alt="character-imgage" style="width:300px;height:300px;">
+                <img src="${character.image}" alt="character-image" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back">
               <p>Race: ${character.race}</p>
@@ -65,24 +63,20 @@ fetch(`http://localhost:3000/quests/${id}`)
               <p>Realm: ${character.realm}</p>
                       
             </div>
-        </div>`
-
+        </div>
+        `
         div.append(charCard)
         charSection.append(div)
       })
-      if(charactersLength < randomNumber){
-        const looseMessage = document.createElement("h2") 
 
-        looseMessage.textContent = "Sorry, the message was not a succes. Maybe try adding more members to your fellowship"
-
-        winLoose.append(looseMessage)
-      }else {
-        const winMessage = document.createElement("h2") 
-
-        winMessage.textContent = "Congradulations! The fellowship was successful in the mission"
-
-        winLoose.append(winMessage)
-      }
-})
+if(charactersLength < randomNumber){
+  const looseMessage = document.createElement("h2") 
+  looseMessage.textContent = "Sorry, the quest was not a success. Maybe try adding more members to your fellowship."
+  winLoose.append(looseMessage)
+}else{
+  const winMessage = document.createElement("h2") 
+  winMessage.textContent = "Congratulations! The fellowship was successful in the mission."
+  winLoose.append(winMessage)
+}})
 
 

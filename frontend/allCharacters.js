@@ -20,7 +20,8 @@ fetch('http://localhost:3000/characters')
     character.race === "Hobbit" ||
     character.race === "Maiar" ||
     character.race === "Dragons" ||
-    character.race === "Orcs")
+    character.race === "Orcs"
+    )
   smallerList.forEach(character => {
     if(!raceArray.includes(character.race)){
       raceArray.push(character.race)

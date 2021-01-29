@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-    color: #000000;
+    color: #fbeca3;
     font-size: 34px;
 }
 
@@ -92,17 +92,12 @@ section img {
     width: 10%;
 }
 
-.quest-card-class {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 50%;
-    margin: 1rem;
-    padding: 1rem;
-    box-shadow: 2px 2px 5px rgb(196, 180, 121);
-    background-color: #fbeca3;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .quest-card-class {
     display: block;
     margin-left: auto;
@@ -160,7 +155,7 @@ section img {
 
 #fellowship-section h2 {
     color: black;
-    text-align: left;
+    text-align: center;
 }
 
 #remove-a-character h2 {

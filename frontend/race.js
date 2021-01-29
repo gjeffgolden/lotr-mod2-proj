@@ -8,11 +8,10 @@ fetch('http://localhost:3000/characters')
             raceArray.push(character.race)
             const li = document.createElement('li')
 
-            // const li = document.createElement
             li.textContent = character.race
-            console.log(character.race)
 
             document.querySelector('#race-list').append(li)
           }
         })
-    })
+      }
+    )
