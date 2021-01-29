@@ -2,19 +2,22 @@
 ### Flatiron School Mod 2 Pair Project (Full Stack Web App)
 ##### Colton O'Connor and Jeff Golden
 
+
+
 ## Introduction
 "Lord of the Rings: Choose Your Quest!" allows users to select from a set of 5 LOTR-themed adventures and create a Fellowship to complete the journey. A user can name the Fellowship whatever they want, and then choose from a list of 700+ characters to add to their party. Once their team is set, the user can launch the quest. The final page includes embedded video and audio, an image unique to that adventure, and a pass/fail message based on a simple algorithm.
 
 ## Overview Video
+[YouTube Link]()
 
 ## Technologies
 
 1. Ruby on Rails (backend)
 2. HTML/CSS/JavaScript (frontend)
-3. Lord of the Rings API (seeded with Rest-Client)
+3. [Lord of the Rings API](https://the-one-api.dev/)
 
 ## Schema
-We seeded a list of 933 characters from the Lord of the Rings API (thank you!). In addition to the Character class, we included classes for Fellowships, Oaths and Quests. Fellowships and Characters are linked via a many-to-many (Many:Many) relationship with Oaths as a joiner. Each Fellowship also belongs to a Quest, which has many Fellowships (1:Many).
+We seeded a list of 933 characters from the [Lord of the Rings API](https://the-one-api.dev/)—thank you!. In addition to the Character class, we included classes for Fellowships, Oaths and Quests. Fellowships and Characters are linked via a many-to-many (Many:Many) relationship with Oaths as a joiner. Each Fellowship also belongs to a Quest, which has many Fellowships (1:Many).
 
 ## Code Excerpt
 ```
