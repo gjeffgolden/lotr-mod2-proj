@@ -25,7 +25,7 @@ fetch(`http://localhost:3000/quests/${id}`)
       `
 
       audio.innerHTML = `
-      <audio controls>
+      <audio controls autoplay>
           <source src="${quest.audio}" type="audio/mpeg">
           Your browser does not support the audio element.
       </audio>
