@@ -1,6 +1,6 @@
 # Lord of the Rings: Choose Your Quest!
 ### Flatiron School Mod 2 Pair Project (Full Stack Web App)
-##### Colton O'Connor and Jeff Golden
+##### Colton O'Connor (@bigdumbbaby) and Jeff Golden (@gjeffgolden)
 
 
 
@@ -17,7 +17,7 @@
 3. [Lord of the Rings API](https://the-one-api.dev/)
 
 ## Schema
-We seeded a list of 933 characters from the [Lord of the Rings API](https://the-one-api.dev/)—thank you!. In addition to the Character class, we included classes for Fellowships, Oaths and Quests. Fellowships and Characters are linked via a many-to-many (Many:Many) relationship with Oaths as a joiner. Each Fellowship also belongs to a Quest, which has many Fellowships (1:Many).
+We seeded a list of 933 characters from the [Lord of the Rings API](https://the-one-api.dev/)—thank you!. In addition to the Character class, we included classes for Fellowships, Oaths and Quests. Fellowships and Characters are linked via a many-to-many (M:M) relationship with Oaths as a joiner. Each Fellowship also belongs to a Quest, which has many Fellowships (1:M).
 
 ## Code Excerpt
 ```
