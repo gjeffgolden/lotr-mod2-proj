@@ -16,7 +16,13 @@ fetch(`http://localhost:3000/quests/${id}`)
       const h3 = document.createElement('h3')
       const audio = document.createElement('li')
       const image = document.createElement('span')
+      const video = document.createElement('span')
 
+      video.innerHTML = `
+      <iframe width="560" height="315" src="${quest.video}" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `
 
       audio.innerHTML = `
       <audio controls>
@@ -33,13 +39,14 @@ fetch(`http://localhost:3000/quests/${id}`)
       document.querySelector('#quest-section').append(h3)
       document.querySelector('#nav-bar').append(audio)
       document.querySelector('#image-section').append(image)
+      document.querySelector('#quest-video').append(video)
+
       quest.characters.forEach( character => {
         const div = document.createElement('div')
         const charCard = document.createElement('div')
 
         div.className = 'fellowship-char-info'
         charCard.className = 'oath-class'
-
 
         charCard.innerHTML = `
         <div class="flip-card-inner">
