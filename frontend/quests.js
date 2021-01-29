@@ -5,7 +5,6 @@ const form = document.querySelector('#fellowship-form')
 const fellowshipSection = document.querySelector('#fellowship-section')
 
 form.action = `http://localhost:3000/fellowships?quest_id=${id}`
-console.log(form.action)
 
 fetch(`http://localhost:3000/quests/${id}`)
     .then(response => response.json())
@@ -36,15 +35,3 @@ fetch(`http://localhost:3000/quests/${id}`)
         fellowshipSection.append(fellowshipCard)
         }
     }
-
-
-
-// fetch(`http://localhost:3000/quests/`)
-//   .then( response => response.json())
-//   .then( quests => quests.forEach(quest => {
-//     const option = document.createElement('option')
-
-//     option.value = quest.id 
-//     option.textContent = quest.name
-//     questDropdown.append(option)
-//   }))

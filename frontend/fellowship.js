@@ -26,7 +26,6 @@ fetch(`http://localhost:3000/fellowships/${id}`)
 
     function showOaths(oaths){
         oaths.forEach(oath => {
-        
             if(oath.fellowship.id == id){
                 const div = document.createElement('div')
                 const oathCard = document.createElement("div")
