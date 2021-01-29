@@ -1,6 +1,6 @@
 # Lord of the Rings: Choose Your Quest!
 ### Flatiron School Mod 2 Pair Project (Full Stack Web App)
-##### Colton O'Connor ( @bigdumbbaby ) and Jeff Golden ( @gjeffgolden )
+##### Colton O'Connor (@bigdumbbaby) and Jeff Golden (@gjeffgolden)
 
 
 
@@ -8,7 +8,7 @@
 "Lord of the Rings: Choose Your Quest!" allows users to select from a set of 5 LOTR-themed adventures and create a Fellowship to complete the journey. A user can name the Fellowship whatever they want, and then choose from a list of 700+ characters to add to their party. Once their team is set, the user can launch the quest. The final page includes embedded video and audio, an image unique to that adventure, and a pass/fail message based on a simple algorithm.
 
 ## Overview Video
-[YouTube Link]()
+* [YouTube Link](https://www.youtube.com/watch?v=KUpJMC6Fd4g&feature=youtu.be)
 
 ## Technologies
 
